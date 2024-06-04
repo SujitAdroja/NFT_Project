@@ -70,6 +70,9 @@
   .banner-heading {
     font-size: 1.8rem;
   }
+  .banner-tagline {
+    font-size: 3rem;
+  }
 
   .wallet-code input {
     width: 5rem;
