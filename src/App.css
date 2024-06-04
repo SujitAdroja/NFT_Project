@@ -1,0 +1,455 @@
+/* general css */
+
+.container {
+  /* 1140px */
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 4.8rem 0;
+}
+.section-banner {
+  padding: 2.4rem 0 4.8rem 0;
+}
+.line-container {
+  max-width: 60rem;
+  margin: 0 auto;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem !important;
+}
+
+.banners-track-line {
+  background-color: #c0c0c0;
+  padding: 0.1rem;
+  width: 100%;
+  border-radius: 1rem;
+}
+.banners-track-line.active {
+  background-color: #000;
+}
+
+.banners-container {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+.banners-container::-webkit-scrollbar {
+  display: none;
+}
+.banner-content {
+  background-color: #e6e9f2;
+  padding: 4rem;
+  border-radius: 2.5rem;
+}
+
+.banner-content.active {
+  transform: translateX(-100%);
+}
+.banner-label span {
+  padding: 0.2rem 2rem;
+  background-color: #fadfe4;
+  display: inline-block;
+  margin-bottom: 3.2rem;
+  border-radius: 2rem;
+}
+.banner-heading {
+  color: #617587;
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+.banner-tagLine {
+  font-size: 3.6rem;
+  margin-bottom: 1.2rem;
+}
+.collection-owner {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3.2rem;
+}
+.banner-buttons {
+  display: flex;
+  gap: 1rem;
+}
+.tag-artist {
+  color: #617587;
+  font-size: 0.9rem;
+}
+.artist-name {
+  font-weight: 400;
+  color: #000;
+}
+.banner-content {
+  display: flex;
+  min-width: 100%;
+  box-sizing: border-box;
+  transition: transform 0.5s ease;
+}
+.banner-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner-image {
+  border-radius: 3rem;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.carousel-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem !important;
+  gap: 1rem;
+}
+.btn-container {
+  height: 1rem;
+  width: 1rem;
+}
+
+/* hero section collection */
+.hero-description {
+  margin-bottom: 3.2rem;
+  line-height: 2;
+}
+
+/* header css */
+.footer-heading {
+  font-size: 1.6rem;
+}
+.header {
+  padding: 1.5rem 0;
+}
+
+.heading-ternary {
+  font-size: 1.6rem;
+  margin-bottom: 3.2rem;
+}
+.footer {
+  padding: 1rem 0;
+  background-color: #e6e9f2;
+}
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.3rem;
+}
+.icons {
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: black;
+  font-size: 1.4rem;
+}
+/* section collection */
+.card {
+  padding: 1rem;
+  background-color: white;
+  border-radius: 2.4rem;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+  position: relative;
+  cursor: pointer;
+}
+.image-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.8rem;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.card-img {
+  display: block;
+  width: 100%;
+  /* height: 16rem; */
+}
+.image-container::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  opacity: 0;
+  z-index: 1;
+  transition: 0.3s ease-in-out;
+}
+.image-container::after {
+  content: "Go to collection->";
+  position: absolute;
+  font-size: 0.9rem;
+  top: 50%;
+  left: 50%;
+  visibility: hidden;
+  padding: 0.5rem 1.7rem;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 3rem;
+  background-color: #fff;
+  z-index: 2;
+}
+.image-container:hover::before {
+  opacity: 0.4;
+}
+.image-container:hover::after {
+  visibility: visible;
+}
+.card-grid {
+  display: grid;
+  column-gap: 4.2rem;
+  row-gap: 4.2rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+.card-content {
+  padding: 0 0.5rem;
+}
+
+.card-head {
+  margin-bottom: 2.4rem;
+}
+.card-label span {
+  display: inline;
+  padding: 0.2rem 1.5rem;
+  background-color: #e1edd9;
+  color: #23252b;
+  display: inline-block;
+  border-radius: 2rem;
+}
+.price-range {
+  color: #617587;
+}
+.card-description {
+  margin-bottom: 3.2rem;
+}
+.collection-owner-card {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.nft-image-container {
+  position: relative;
+  display: inline-block;
+  /* margin-bottom: 1.8rem; */
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.nft-image-container::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  opacity: 0;
+  z-index: 1;
+  transition: 0.3s ease-in-out;
+}
+.nft-image-container::after {
+  content: "Buy NFT ->";
+  position: absolute;
+  font-size: 0.9rem;
+  top: 50%;
+  left: 50%;
+  visibility: hidden;
+  padding: 0.5rem 1.7rem;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 3rem;
+  background-color: #fff;
+  z-index: 2;
+}
+.nft-image-container:hover::before {
+  opacity: 0.4;
+}
+.nft-image-container:hover::after {
+  visibility: visible;
+}
+/* connect page csss */
+
+.connect-page {
+  height: 79vh;
+  /* padding: 12rem 0; */
+}
+.wallet-info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.heading-tertiary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+  color: #23252b;
+}
+.wallet-code {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.wallet-code input {
+  padding: 2rem 1rem;
+  border: 1px solid #23252b;
+  border-radius: 1rem;
+  background: none;
+  color: #23252b;
+}
+/* reusable */
+
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--center-v {
+  align-items: center;
+}
+
+/* flex box for space between */
+
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn {
+  width: 15rem;
+  color: black;
+  padding: 1rem 2rem;
+  background: none;
+  border: 1px solid black;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-size: 1rem;
+  /* font-weight: 600; */
+}
+.buy-sell-btn {
+  width: 15rem;
+  color: white;
+  background-color: #23252b;
+  padding: 1rem 2rem;
+  border: 1px solid black;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.owner-image {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* account slider component */
+.account-slider {
+  position: fixed;
+  top: 1rem;
+  right: 0rem;
+  transform: translateX(110%);
+  padding: 1rem 2rem;
+  background-color: #fff;
+  border: 1px solid black;
+  border-radius: 1rem;
+  width: 20rem;
+  height: 40rem;
+  z-index: 3;
+  box-shadow: -30px 0px 3px 0px rgba(212, 212, 212, 50%);
+  transition: all 0.3s ease-in-out;
+}
+.account-slider.active {
+  transform: translateX(-1rem);
+}
+
+.arrow-component {
+  position: absolute;
+  top: 10px;
+  left: -25px;
+}
+.arrow-btn {
+  cursor: pointer;
+  font-size: 1.4rem;
+  background: none;
+  border: none;
+  color: black;
+}
+.account-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  margin-bottom: 2.4rem;
+}
+.account-number {
+  font-size: 0.9rem;
+  color: #617587;
+}
+.account-image {
+  width: 2rem;
+  height: 2rem;
+  background-color: #23252b;
+  border-radius: 100%;
+}
+.icon-btn {
+  background: none;
+  border: none;
+  color: black;
+  font-size: 1.5rem;
+  margin-left: auto;
+  cursor: pointer;
+}
+.account-amount {
+  font-weight: 400;
+}
+.m-b24rem {
+  margin-bottom: 2.4rem;
+}
+.m-b32rem {
+  margin-bottom: 3.2rem;
+}
+.account-nft-collection {
+  height: 22rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: scroll;
+  border-radius: 1rem;
+}
+.nft-img {
+  width: 100%;
+  border-radius: 1rem;
+}
+.in-your-wallet {
+  color: #617587;
+  font-size: 0.7rem;
+}
+.paragraph-info {
+  color: #617587;
+  text-align: center;
+  margin-bottom: 2.4rem;
+}
+.heading-secondary {
+  font-size: 1.8rem;
+  margin-bottom: 2.4rem;
+}
