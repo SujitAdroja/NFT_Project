@@ -125,6 +125,12 @@
   .icons {
     font-size: 2rem;
   }
+  .buy-sell-btn {
+    width: 100%;
+  }
+  .connect-page {
+    min-height: 90vh;
+  }
 }
 
 /**************************/

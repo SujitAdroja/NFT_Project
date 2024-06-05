@@ -1,8 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import useApp from "../hook";
 
-function AccountSlider({ accountOpenClose, handleAccountSlider, accNFTS }) {
+function AccountSlider({
+  accountOpenClose,
+  handleAccountSlider,
+  accNFTS,
+  // setAccNFTS,
+  // settignNFTSData,
+}) {
   const navigate = useNavigate();
+  const { sellNFT } = useApp();
 
   useEffect(() => {
     window.addEventListener("click", function (e) {
@@ -71,6 +79,16 @@ function AccountSlider({ accountOpenClose, handleAccountSlider, accNFTS }) {
                   alt={nft.nft_name}
                   className="nft-img"
                 />
+                <button
+                  className="sell-btn"
+                  onClick={() => {
+                    // sellNFT(nft.nft_id);
+                    // settignNFTSData();
+                  }}
+                >
+                  {/* <ion-icon name="trash-outline"></ion-icon> */}
+                  Sell
+                </button>
               </div>
             ))}
         </div>

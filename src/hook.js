@@ -33,11 +33,19 @@ const useApp = () => {
     const newData = { ...oldData, nfts: [newNFT, ...oldData.nfts] };
     localStorage.setItem("user", JSON.stringify(newData));
   };
-
+  const sellNFT = (nftID) => {
+    console.log(nftID);
+    const oldData = JSON.parse(localStorage.getItem("user"));
+    const nfts = oldData.nfts;
+    const newNFTs = nfts.filter((nft) => +nft.nft_id !== +nftID);
+    const newData = { ...oldData, nfts: newNFTs };
+    localStorage.setItem("user", JSON.stringify(newData));
+  };
   return {
     ConnectToWallet,
     fetchData,
     buyNFT,
+    sellNFT,
   };
 };
 export default useApp;

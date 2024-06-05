@@ -42,6 +42,9 @@ function App() {
     setAccountOpenClose(val);
     setAccNFTS(JSON.parse(localStorage.getItem("user")).nfts);
   };
+  const settignNFTSData = () => {
+    setAccNFTS(JSON.parse(localStorage.getItem("user")).nfts);
+  };
 
   return (
     <>
@@ -51,6 +54,8 @@ function App() {
           accNFTS={accNFTS}
           accountOpenClose={accountOpenClose}
           handleAccountSlider={handleAccountSlider}
+          setAccNFTS={setAccNFTS}
+          settignNFTSData={settignNFTSData}
         />
         <ScrollToTop />
         <Routes>

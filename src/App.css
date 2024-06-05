@@ -433,9 +433,37 @@
   overflow-y: scroll;
   border-radius: 1rem;
 }
+.nft-image-box {
+  position: relative;
+}
 .nft-img {
   width: 100%;
   border-radius: 1rem;
+}
+
+.sell-btn {
+  position: absolute;
+  opacity: 0;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  color: #fff;
+  border: none;
+  border: 1px solid #fff;
+  border-radius: 1rem;
+  letter-spacing: 1.2px;
+  font-weight: 500;
+  padding: 0.5rem;
+  font-size: 0.7rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.sell-btn:hover {
+  background-color: #fff;
+  color: black;
+}
+.nft-image-box:hover .sell-btn {
+  opacity: 1;
 }
 .in-your-wallet {
   color: #617587;
