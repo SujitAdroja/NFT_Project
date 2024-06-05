@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useApp from "../hook";
+import copy from "copy-to-clipboard";
 
 function AccountSlider({
   accountOpenClose,
@@ -41,6 +42,15 @@ function AccountSlider({
       <div className="account-info">
         <div className="account-image"></div>
         <p className="account-number">suhfuh9i9809</p>
+        <button
+          className="copy-btn"
+          title="Copy"
+          onClick={() => {
+            copy(document.querySelector(".account-number").textContent);
+          }}
+        >
+          <ion-icon name="copy-outline"></ion-icon>
+        </button>
         <button
           className="icon-btn"
           onClick={() => {

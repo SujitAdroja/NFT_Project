@@ -267,6 +267,7 @@
 
 .connect-page {
   height: 79vh;
+  background-color: #e6e9f2;
 }
 .wallet-info {
   height: 100%;
@@ -407,6 +408,13 @@
   height: 2rem;
   background-color: #23252b;
   border-radius: 100%;
+}
+.copy-btn {
+  background: none;
+  color: black;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
 }
 .icon-btn {
   background: none;
