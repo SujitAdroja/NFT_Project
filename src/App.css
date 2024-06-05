@@ -1,7 +1,4 @@
-/* general css */
-
 .container {
-  /* 1140px */
   max-width: 120rem;
   padding: 0 3.2rem;
   margin: 0 auto;
@@ -62,7 +59,7 @@
   font-size: 1.4rem;
 }
 .banner-tagLine {
-  font-size: 3.6rem;
+  font-size: 3rem;
   margin-bottom: 1.2rem;
 }
 .collection-owner {
@@ -99,6 +96,7 @@
   max-width: 100%;
   height: auto;
   display: block;
+  align-self: center;
 }
 
 .carousel-btn-container {
@@ -122,14 +120,7 @@
 .footer-heading {
   font-size: 1.6rem;
 }
-.header {
-  padding: 1.5rem 0;
-}
 
-.heading-ternary {
-  font-size: 1.6rem;
-  margin-bottom: 3.2rem;
-}
 .footer {
   padding: 1rem 0;
   background-color: #e6e9f2;
@@ -276,7 +267,6 @@
 
 .connect-page {
   height: 79vh;
-  /* padding: 12rem 0; */
 }
 .wallet-info {
   height: 100%;
@@ -304,7 +294,14 @@
   color: #23252b;
 }
 /* reusable */
+.header {
+  padding: 1.5rem 0;
+}
 
+.heading-ternary {
+  font-size: 1.6rem;
+  margin-bottom: 3.2rem;
+}
 .grid {
   display: grid;
   column-gap: 6.4rem;

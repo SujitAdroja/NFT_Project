@@ -13,7 +13,7 @@ import {
   json,
 } from "react-router-dom";
 import SingleCollection from "./collectionScreen/SingleCollection";
-import ConnectWallet from "./ConnectWallet";
+import ConnectWallet from "./pages/ConnectWallet";
 import Header from "./Component/Header";
 import Footer from "./Component/Footer";
 import data from "./data";
