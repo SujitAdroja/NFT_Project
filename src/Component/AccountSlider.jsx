@@ -10,7 +10,6 @@ function AccountSlider({ accountOpenClose, handleAccountSlider, accNFTS }) {
         <button
           className="arrow-btn"
           onClick={() => {
-            navigate("/");
             handleAccountSlider();
           }}
         >

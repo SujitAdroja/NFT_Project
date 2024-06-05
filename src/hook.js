@@ -30,7 +30,7 @@ const useApp = () => {
     const collection = data.filter((col) => col.id === +collection_id)[0];
     console.log(collection);
     const newNFT = collection.nfts.filter((nft) => nft.nft_id === nftID)[0];
-    const newData = { ...oldData, nfts: [...oldData.nfts, newNFT] };
+    const newData = { ...oldData, nfts: [newNFT, ...oldData.nfts] };
     localStorage.setItem("user", JSON.stringify(newData));
   };
 

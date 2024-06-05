@@ -1,16 +1,22 @@
 import React from "react";
 import useApp from "../hook";
+import { useNavigate } from "react-router-dom";
 
 function NFTcard({ nft_image, nft_name, nft_price, collection_id, nft_id }) {
-  const { buyNFT } = useApp();
+  const navigate = useNavigate();
 
+  const { buyNFT, fetchData } = useApp();
+
+  const handleBuyNFt = () => {
+    const data = fetchData();
+    if (data.accountStatus === false) {
+      navigate("/connect-wallet");
+    } else {
+      buyNFT(collection_id, nft_id);
+    }
+  };
   return (
-    <div
-      className="card"
-      onClick={() => {
-        buyNFT(collection_id, nft_id);
-      }}
-    >
+    <div className="card" onClick={handleBuyNFt}>
       <div className="nft-image-container">
         <img src={nft_image} alt={nft_image} className="card-img" />
       </div>
