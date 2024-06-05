@@ -450,3 +450,23 @@
   font-size: 1.8rem;
   margin-bottom: 2.4rem;
 }
+
+.pop-up {
+  position: fixed;
+  top: -10rem;
+  left: 50%;
+  transform: translate(-50%);
+  max-width: 20rem;
+  text-align: center;
+  padding: 1rem 2rem;
+  background-color: #d4edd9;
+  border: 1px solid #296434;
+  color: #296434;
+  border-radius: 1rem;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.125);
+  z-index: 5;
+  transition: top 0.35s ease-in-out;
+}
+.pop-up.active {
+  top: 1rem;
+}

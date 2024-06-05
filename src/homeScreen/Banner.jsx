@@ -10,7 +10,7 @@ function Banner() {
   const nextIndex = () => {
     const carousel = document.querySelectorAll(".banner-content");
     const screenWidth = window.innerWidth;
-    console.log(screenWidth);
+
     let currentIndex = 0;
     if (index >= data.length - 1) {
       currentIndex = 0;
@@ -28,9 +28,10 @@ function Banner() {
   useEffect(() => {
     const timeInterval = setTimeout(() => {
       nextIndex();
-      return clearTimeout(timeInterval);
     }, 3000);
-    return;
+    return () => {
+      clearTimeout(timeInterval);
+    };
   }, [index]);
 
   return (

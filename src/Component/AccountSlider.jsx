@@ -4,13 +4,27 @@ import { useNavigate } from "react-router-dom";
 function AccountSlider({ accountOpenClose, handleAccountSlider, accNFTS }) {
   const navigate = useNavigate();
 
+  useEffect(() => {
+    window.addEventListener("click", function (e) {
+      const accSlider = e.target.closest(".account-slider");
+
+      if (accSlider === null) {
+        handleAccountSlider(false);
+      }
+      if (e.target.textContent === "Account") {
+        handleAccountSlider(true);
+      }
+    });
+  }, []);
+
   return (
     <div className={`account-slider ${accountOpenClose ? "active" : ""}`}>
       <div className="arrow-component">
         <button
           className="arrow-btn"
           onClick={() => {
-            handleAccountSlider();
+            navigate("/");
+            handleAccountSlider(false);
           }}
         >
           &#x27BE;
@@ -20,7 +34,12 @@ function AccountSlider({ accountOpenClose, handleAccountSlider, accNFTS }) {
       <div className="account-info">
         <div className="account-image"></div>
         <p className="account-number">suhfuh9i9809</p>
-        <button className="icon-btn" onClick={handleAccountSlider}>
+        <button
+          className="icon-btn"
+          onClick={() => {
+            handleAccountSlider(false);
+          }}
+        >
           <ion-icon name="arrow-forward-circle-outline"></ion-icon>
         </button>
       </div>
@@ -37,7 +56,7 @@ function AccountSlider({ accountOpenClose, handleAccountSlider, accNFTS }) {
               className="buy-sell-btn"
               onClick={() => {
                 navigate("/");
-                handleAccountSlider();
+                handleAccountSlider(false);
               }}
             >
               Start Shopping

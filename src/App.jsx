@@ -38,8 +38,8 @@ function App() {
     JSON.parse(localStorage.getItem("user")).nfts
   );
 
-  const handleAccountSlider = () => {
-    setAccountOpenClose((accountOpenClose) => !accountOpenClose);
+  const handleAccountSlider = (val) => {
+    setAccountOpenClose(val);
     setAccNFTS(JSON.parse(localStorage.getItem("user")).nfts);
   };
 

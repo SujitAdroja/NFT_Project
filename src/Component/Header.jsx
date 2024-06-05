@@ -12,17 +12,16 @@ function Header({ handleAccountSlider }) {
 
   const handleConnectWallet = function () {
     const connect_BTN = document.querySelector(".btn-acc-connect");
-    console.log(connect_BTN.textContent);
     if (location.pathname === "/connect-wallet") {
       setAccount(true);
       ConnectToWallet();
     } else if (connect_BTN.textContent === "Account") {
-      handleAccountSlider();
+      handleAccountSlider(true);
     } else {
       navigate("/connect-wallet");
     }
   };
-  console.log(location.pathname);
+
   return (
     <div className="container ">
       <div className="header flex-space-between">

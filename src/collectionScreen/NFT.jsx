@@ -3,8 +3,6 @@ import NFTcard from "../Component/NFTcard";
 import useApp from "../hook";
 
 function NFT({ nftsData, collection_id }) {
-  const { fetchData } = useApp();
-  console.log(fetchData());
   return (
     <section className="section section-collection">
       <div className="container">

@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import useApp from "../hook";
 import { useNavigate } from "react-router-dom";
+import PopUpNFT from "../assets/PopUpNFT";
 
 function NFTcard({ nft_image, nft_name, nft_price, collection_id, nft_id }) {
   const navigate = useNavigate();
 
+  const [active, setActive] = useState(false);
   const { buyNFT, fetchData } = useApp();
 
   const handleBuyNFt = () => {
@@ -13,10 +15,23 @@ function NFTcard({ nft_image, nft_name, nft_price, collection_id, nft_id }) {
       navigate("/connect-wallet");
     } else {
       buyNFT(collection_id, nft_id);
+      setActive(true);
     }
   };
+
+  useEffect(() => {
+    const timeOut = setTimeout(() => {
+      console.log("hello");
+      setActive(false);
+    }, 2000);
+    return () => {
+      clearTimeout(timeOut);
+    };
+  }, [active]);
+
   return (
     <div className="card" onClick={handleBuyNFt}>
+      <PopUpNFT active={active} setActive={setActive} />
       <div className="nft-image-container">
         <img src={nft_image} alt={nft_image} className="card-img" />
       </div>
