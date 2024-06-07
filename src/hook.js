@@ -1,7 +1,5 @@
 import { useNavigate } from "react-router-dom";
 
-//commented code is for the local storage purpose create first
-// now it is connnected with the data base so no worries
 const useApp = () => {
   const date = new Date();
   const navigate = useNavigate();
@@ -33,6 +31,7 @@ const useApp = () => {
     const newData = { ...oldData, nfts: [newNFT, ...oldData.nfts] };
     localStorage.setItem("user", JSON.stringify(newData));
   };
+  //sell nft function
   const sellNFT = (nftID) => {
     console.log(nftID);
     const oldData = JSON.parse(localStorage.getItem("user"));
