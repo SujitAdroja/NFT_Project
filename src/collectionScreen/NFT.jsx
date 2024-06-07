@@ -1,6 +1,5 @@
 import React from "react";
 import NFTcard from "../Component/NFTcard";
-import useApp from "../hook";
 
 function NFT({ nftsData, collection_id }) {
   return (

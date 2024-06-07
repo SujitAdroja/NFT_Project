@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import useApp from "../hook";
 import { useNavigate } from "react-router-dom";
-import PopUpNFT from "../assets/PopUpNFT";
+import PopUpNFT from "./PopUpNFT";
 
 function NFTcard({ nft_image, nft_name, nft_price, collection_id, nft_id }) {
   const navigate = useNavigate();
