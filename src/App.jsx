@@ -10,7 +10,6 @@ import {
   Route,
   Navigate,
   useLocation,
-  json,
 } from "react-router-dom";
 import SingleCollection from "./collectionScreen/SingleCollection";
 import ConnectWallet from "./pages/ConnectWallet";
