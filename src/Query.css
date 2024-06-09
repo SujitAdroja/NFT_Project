@@ -125,7 +125,8 @@
   .icons {
     font-size: 2rem;
   }
-  .buy-sell-btn {
+  .buy-sell-btn,
+  .btn {
     width: 100%;
   }
   .connect-page {
